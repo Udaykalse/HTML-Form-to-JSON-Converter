@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to JSON Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Information Form</h1>
+        <p>Fill out the form and convert your data to JSON format</p>
+        
+        <form id="userForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="india">India</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Hobbies</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="reading"> Reading
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="sports"> Sports
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="music"> Music
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="travel"> Travel
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="cooking"> Cooking
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="hobbies" value="gaming"> Gaming
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="about">About Me</label>
+                <textarea id="about" name="about" rows="4" placeholder="Tell us about yourself..."></textarea>
+            </div>
+            
+            <button type="submit" id="convertBtn">Convert to JSON</button>
+        </form>
+        
+        <div class="output-container">
+            <h2>JSON Output</h2>
+            <pre id="jsonOutput">Your JSON will appear here...</pre>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
